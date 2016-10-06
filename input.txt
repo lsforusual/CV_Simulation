@@ -1,0 +1,26 @@
+-0.3
+0.3
+0.006
+0.0102
+0.00704
+298.2
+0.0000001668
+424
+6.7e-8
+0.04
+100
+
+**************************************************************
+Syntax
+Ei in volt - Starting potential
+Ef in volt - Final Potential
+Eo in volt - Normal Potential
+S in cm2 - Surface Area
+Co in mol/L - Initial Concentration
+T in K - Temperature
+D in cm2/s - Diffusion Coefficient
+Ru in ohm - Uncompensated Electrode Resistance
+Cd in F - Electrode Capacitance
+ks in cm/s - Charge Constant Rate Constant
+v in volt/s - Scan Rate
+***************************************************************

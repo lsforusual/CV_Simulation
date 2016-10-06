@@ -4,7 +4,10 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core
+QT       -= gui
+CONFIG   += console
+CONFIG   += app_buddle
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,8 +16,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+    datarw.cpp \
+    fitfunc.cpp \
+    iodata.cpp \
+    datascan.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    inputdata.h \
+    outputdata.h
 
-FORMS    += mainwindow.ui
+FORMS    +=
