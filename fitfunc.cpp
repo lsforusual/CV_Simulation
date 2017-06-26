@@ -5,59 +5,138 @@
 
 extern outputData dataScan(inputData idata);
 
-int fitFunc(inputData idata, outputData& odata){
-  int i=0;
-  double step=0.1;
-  odata = dataScan(idata);
-  long double realdE=idata.realdE;
-  long double k=idata.ks;
-  long double last_dep = 0.0 ;
-  while(abs(realdE-odata.DEp)>0.0005 && i <=1000 )
-    {
-      last_dep=abs(realdE-odata.DEp);
+long double fitS(inputData idata, outputData odata)
+{
+	int i=0;
+	double step=0.1;
+	odata = dataScan(idata);
+	long double _s=idata.S;
+	long double last[3] ;
+	long double realIp1=idata.realIp1;
 
-      idata.ks /= (1.0 + step) ;
-      odata = dataScan(idata);
+	//fit for S
+	idata.v = 0.1;
 
-      if (last_dep < abs(realdE-odata.DEp))
-        {
+	//flag
+	//odata = dataScan(idata);
+	last[0] = 0.0;
 
-          idata.ks *= (1.0 + step);
-          step /= 10;
-        }
+	idata.S *=(1.0 + step);
+	odata = dataScan(idata);
+	last[1] = odata.Ip1;
+	idata.S = _s;
 
-      i++;
-      if(last_dep == abs(realdE-odata.DEp)) break;
-      cout << "No " << i << " interator the err is : " << abs(realdE-odata.DEp) << "   the ks is: " <<  idata.ks*100 <<endl;
+	idata.S *=(1.0 - step);
+	odata = dataScan(idata);
+	last[2] = odata.Ip1;
+	idata.S = _s;
 
-    }
+	odata = dataScan(idata);
 
-  if(i>1000)
-    {
-      idata.ks =k;
-      while(abs(realdE-odata.DEp)>0.0005 && i <= 2000)
-      {
-        last_dep=abs(realdE-odata.DEp);
+	while (abs(realIp1-odata.Ip1) > 0.000001 && i<=1000)
+	  {
+	    if (abs(realIp1-last[1]) < abs(realIp1-last[2]))
+	      {
+		last[0] = abs(realIp1-odata.Ip1);
+		idata.S *=(1.0 + step);
+		odata = dataScan(idata);
+		if(last[0] < abs(realIp1-odata.Ip1))
+		  {
+		    idata.S /=(1.0 + step);
+		    step /=10;
+		  }else if (last[0] == abs(realIp1-odata.Ip1)){
+		    break;
+		  }
 
-        idata.ks *= (1.0 + step) ;
-        odata = dataScan(idata);
+	      }else{
+		last[0] = abs(realIp1-odata.Ip1);
+		idata.S /=(1.0 + step);
+		odata = dataScan(idata);
+		if(last[0] < abs(realIp1-odata.Ip1))
+		  {
+		    idata.S *=(1.0 + step);
+		    step /=10;
+		  }else if (last[0] == abs(realIp1-odata.Ip1)){
+		    break;
+		  }
+	      }
+	    cout << "No_" << i << "interotor the err of dIp1 is :" << abs(realIp1-odata.Ip1) << " the S is " << idata.S*10000 << endl;
+	    i++;
+	  }
+	return 	idata.S;
+;
+}
 
-        if(last_dep == abs(realdE-odata.DEp)) break;
+long double fitKs(inputData idata, outputData odata)
+{
+	int i=0;
+	double step=0.1;
+	odata = dataScan(idata);
+	long double realdE=idata.realdE;
+	long double _k=idata.ks;
+	
+	long double last[3] ;
 
-        if (last_dep < abs(realdE-odata.DEp))
-          {
+	//idata.S = fitS(idata,odata);
 
-            idata.ks *= (1.0 + step);
-            step /= 10;
-          }
+	//fit for Ep
+	last[0] = 0.0;
 
-        i++;
+	idata.ks *=(1.0 + step);
+	odata = dataScan(idata);
+	last[1] = odata.DEp;
+	idata.ks = _k;
 
-        cout << i << " : " << abs(realdE-odata.DEp) <<endl;
-      }
-    }
-  if(i>2000) return 0;
+	idata.ks *=(1.0 - step);
+	odata = dataScan(idata);
+	last[2] = odata.DEp;
+	idata.ks = _k;
 
-  odata.ks = idata.ks*100.0;
-  return i;
+	odata = dataScan(idata);
+
+	while (abs(realdE-odata.DEp) > 0.000001 && i<=1000)
+	{
+		if (abs(realdE-last[1]) < abs(realdE-last[2]))
+		{
+			last[0] = abs(realdE-odata.DEp);
+			idata.ks *=(1.0 + step);
+			odata = dataScan(idata);
+			if(last[0] < abs(realdE-odata.DEp))
+			{
+				idata.ks /=(1.0 + step);
+				step /=10;
+			}else if (last[0] == abs(realdE-odata.DEp)){ 
+				break;
+			}
+
+		}else{
+			last[0] = abs(realdE-odata.DEp);
+			idata.ks /=(1.0 + step);
+			odata = dataScan(idata);
+			if(last[0] < abs(realdE-odata.DEp))
+			{
+				idata.ks *=(1.0 + step);
+				step /=10;
+			}else if (last[0] == abs(realdE-odata.DEp)){ 
+			    cout << "No_" << i << "interotor the err of delta_dE is :" << abs(realdE-odata.DEp) << " the ks is " << idata.ks*100.0 << endl;
+				break;
+			}
+		};
+
+		cout << "No_" << i << "interotor the err of dE is :" << abs(realdE-odata.DEp) << " the ks is " << idata.ks*100.0 << endl;
+		i++;
+	}
+
+	return idata.ks;
+
+}
+
+int fitFunc(inputData idata, outputData& odata)
+{
+	idata.S = fitS(idata,odata);
+	idata.ks= fitKs(idata,odata);
+	odata = dataScan(idata);
+	odata.S = idata.S * 10000.0;
+	odata.ks = idata.ks * 100.0;
+	return 1;
 }

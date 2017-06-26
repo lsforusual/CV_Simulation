@@ -1,0 +1,9 @@
+This directory includes a number of modules (in subdirectory modules),
+functions and subroutines (in subdirectory subs) and programs using
+them (subdirectory progs). All have been tested reasonably thoroughly,
+and should work with all permissible input. A description of all
+these, beyond what is contained as commentary in the source codes, is
+given in Appendix E.
+
+All program work with a precision defined in STUFF.F90 of at least 14
+decimal digits.

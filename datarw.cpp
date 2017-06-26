@@ -60,7 +60,7 @@ void dataRW(char* filename,const char* o,inputData* idata)
     }
 }
   //---------------------
-void dataRW(char* filename, const char* o, outputData *odata)
+void dataRW(char* filename, const char* o, outputData* odata)
   {
       fstream file;
 
@@ -87,11 +87,7 @@ void dataRW(char* filename, const char* o, outputData *odata)
       if(file.is_open())
         {
           //file << odata.getData() <<endl;
-          int i=0;
-          while(i<rows)
-            {
-              file << odata[i++].format_GetData() <<endl;
-            }
+              file << (*odata).format_GetData() <<endl;
         }
       file.close();
 

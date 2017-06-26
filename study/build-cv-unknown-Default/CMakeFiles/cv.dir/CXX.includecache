@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/think/Programme/CV_Simulation/study/cv/main.cpp
+fstream
+-
+vector
+-
+cmath
+-
+iostream
+-
+windows.h
+-
+

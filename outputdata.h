@@ -33,8 +33,9 @@ public:
     long double DEp;
 
     long double ks;
+	long double S;
 
-    long double plotdata[2][400];
+    long double plotdata[2][4000];
 
 
 

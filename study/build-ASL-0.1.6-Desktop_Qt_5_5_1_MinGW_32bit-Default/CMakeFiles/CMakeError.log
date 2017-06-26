@@ -1,0 +1,132 @@
+Determining if the CL_VERSION_2_0 exist failed with the following output:
+Change Dir: H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/PROGRA~1/qt/Tools/MINGW4~1/bin/mingw32-make.exe" "cmTC_3bd28/fast"
+D:/PROGRA~1/qt/Tools/MINGW4~1/bin/mingw32-make.exe -f CMakeFiles\cmTC_3bd28.dir\build.make CMakeFiles/cmTC_3bd28.dir/build
+mingw32-make.exe[1]: Entering directory 'H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3bd28.dir/CheckSymbolExists.c.obj
+D:\PROGRA~1\qt\Tools\MINGW4~1\bin\gcc.exe     -o CMakeFiles\cmTC_3bd28.dir\CheckSymbolExists.c.obj   -c H:\CV_Simulation\study\build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+H:\CV_Simulation\study\build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c:2:47: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+                                               ^
+compilation terminated.
+CMakeFiles\cmTC_3bd28.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_3bd28.dir/CheckSymbolExists.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_3bd28.dir/CheckSymbolExists.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+makefile:125: recipe for target 'cmTC_3bd28/fast' failed
+mingw32-make.exe: *** [cmTC_3bd28/fast] Error 2
+
+File H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_0
+  return ((int*)(&CL_VERSION_2_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_2 exist failed with the following output:
+Change Dir: H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/PROGRA~1/qt/Tools/MINGW4~1/bin/mingw32-make.exe" "cmTC_f9a61/fast"
+D:/PROGRA~1/qt/Tools/MINGW4~1/bin/mingw32-make.exe -f CMakeFiles\cmTC_f9a61.dir\build.make CMakeFiles/cmTC_f9a61.dir/build
+mingw32-make.exe[1]: Entering directory 'H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f9a61.dir/CheckSymbolExists.c.obj
+D:\PROGRA~1\qt\Tools\MINGW4~1\bin\gcc.exe     -o CMakeFiles\cmTC_f9a61.dir\CheckSymbolExists.c.obj   -c H:\CV_Simulation\study\build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+H:\CV_Simulation\study\build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c:2:47: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+                                               ^
+compilation terminated.
+CMakeFiles\cmTC_f9a61.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_f9a61.dir/CheckSymbolExists.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_f9a61.dir/CheckSymbolExists.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+makefile:125: recipe for target 'cmTC_f9a61/fast' failed
+mingw32-make.exe: *** [cmTC_f9a61/fast] Error 2
+
+File H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_2
+  return ((int*)(&CL_VERSION_1_2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_1 exist failed with the following output:
+Change Dir: H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/PROGRA~1/qt/Tools/MINGW4~1/bin/mingw32-make.exe" "cmTC_ba7b2/fast"
+D:/PROGRA~1/qt/Tools/MINGW4~1/bin/mingw32-make.exe -f CMakeFiles\cmTC_ba7b2.dir\build.make CMakeFiles/cmTC_ba7b2.dir/build
+mingw32-make.exe[1]: Entering directory 'H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ba7b2.dir/CheckSymbolExists.c.obj
+D:\PROGRA~1\qt\Tools\MINGW4~1\bin\gcc.exe     -o CMakeFiles\cmTC_ba7b2.dir\CheckSymbolExists.c.obj   -c H:\CV_Simulation\study\build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+H:\CV_Simulation\study\build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c:2:47: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+                                               ^
+compilation terminated.
+CMakeFiles\cmTC_ba7b2.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_ba7b2.dir/CheckSymbolExists.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_ba7b2.dir/CheckSymbolExists.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+makefile:125: recipe for target 'cmTC_ba7b2/fast' failed
+mingw32-make.exe: *** [cmTC_ba7b2/fast] Error 2
+
+File H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_1
+  return ((int*)(&CL_VERSION_1_1))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_0 exist failed with the following output:
+Change Dir: H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/PROGRA~1/qt/Tools/MINGW4~1/bin/mingw32-make.exe" "cmTC_04bcf/fast"
+D:/PROGRA~1/qt/Tools/MINGW4~1/bin/mingw32-make.exe -f CMakeFiles\cmTC_04bcf.dir\build.make CMakeFiles/cmTC_04bcf.dir/build
+mingw32-make.exe[1]: Entering directory 'H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_04bcf.dir/CheckSymbolExists.c.obj
+D:\PROGRA~1\qt\Tools\MINGW4~1\bin\gcc.exe     -o CMakeFiles\cmTC_04bcf.dir\CheckSymbolExists.c.obj   -c H:\CV_Simulation\study\build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+H:\CV_Simulation\study\build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c:2:47: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+                                               ^
+compilation terminated.
+CMakeFiles\cmTC_04bcf.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_04bcf.dir/CheckSymbolExists.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_04bcf.dir/CheckSymbolExists.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+makefile:125: recipe for target 'cmTC_04bcf/fast' failed
+mingw32-make.exe: *** [cmTC_04bcf/fast] Error 2
+
+File H:/CV_Simulation/study/build-ASL-0.1.6-Desktop_Qt_5_5_1_MinGW_32bit-Default/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_0
+  return ((int*)(&CL_VERSION_1_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

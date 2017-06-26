@@ -14,6 +14,7 @@ public:
   double Ru, Cd, ks;
   double v;
 
+  double realIp1;
   double realdE;
 
 };
